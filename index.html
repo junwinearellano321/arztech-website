@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARZTECH Internet Services</title>
+
+<style>
+:root {
+    --primary: #0d6efd;
+    --dark: #0a0a0a;
+    --light: #f4f6f9;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--light);
+    color: #333;
+}
+
+/* ===== BIG HEADER ===== */
+header {
+    background: linear-gradient(135deg, #000, var(--primary));
+    color: #fff;
+    padding: 30px ,15px;
+    text-align: center;
+}
+
+header img {
+    width: 420px;
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ===== PLANS ===== */
+.plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.plan {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.plan:hover { transform: translateY(-6px); }
+
+.plan h3 { color: var(--primary); margin-bottom: 10px; }
+.plan .speed { font-size: 22px; font-weight: bold; }
+.plan .price { font-size: 26px; margin: 10px 0; }
+.plan span { font-size: 13px; opacity: 0.7; }
+
+/* ===== FORM ===== */
+.form-section {
+    background: #fff;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.form-section h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 25px;
+}
+
+.form-group { margin-bottom: 15px; }
+label { font-weight: 600; display: block; margin-bottom: 6px; }
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+textarea { height: 90px; resize: none; }
+button {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover { background: #084298; }
+
+/* ===== FOOTER ===== */
+footer {
+    background: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    header img { width: 240px; }
+    header h1 { font-size: 32px; }
+    header p { font-size: 14px; }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="ARZTECH Logo">
+    
+</header>
+
+<section class="plans">
+    <div class="plan">
+        <h3>Basic Plan</h3>
+        <div class="speed">30 Mbps</div>
+        <div class="price">₹799</div>
+        <span>Unlimited Data</span>
+    </div>
+
+    <div class="plan">
+        <h3>Standard Plan</h3>
+        <div class="speed">60 Mbps</div>
+        <div class="price">₹999</div>
+        <span>Best for Families</span>
+    </div>
+
+    <div class="plan">
+        <h3>Premium Plan</h3>
+        <div class="speed">120 Mbps</div>
+        <div class="price">₹1299</div>
+        <span>Gaming & Streaming</span>
+    </div>
+</section>
+
+<section class="form-section">
+    <h2>Apply for New Connection</h2>
+
+    <form action="https://formsubmit.co/junwinearellano123456@gmail.com" method="POST">
+        <!-- Hidden fields for FormSubmit -->
+        <input type="hidden" name="_subject" value="New ARZTECH Internet Application">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" name="first_name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Middle Name</label>
+            <input type="text" name="middle_name">
+        </div>
+
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" name="last_name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label>Facebook Profile</label>
+            <input type="text" name="facebook">
+        </div>
+
+        <div class="form-group">
+            <label>Full Location</label>
+            <textarea name="location" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Select Plan</label>
+            <select name="plan" required>
+                <option value="">Choose Plan</option>
+                <option>₹799 – 30 Mbps</option>
+                <option>₹999 – 60 Mbps</option>
+                <option>₹1299 – 120 Mbps</option>
+            </select>
+        </div>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 ARZTECH • All Rights Reserved
+</footer>
+
+</body>
+</html>
