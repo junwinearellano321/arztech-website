@@ -3,167 +3,219 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARZTECH Internet Services</title>
+<title>Apply for Installation | ArzTech Internet</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-:root {
-    --primary: #0d6efd;
-    --dark: #0a0a0a;
-    --light: #f4f6f9;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
-
-* { box-sizing: border-box; }
 
 body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: var(--light);
-    color: #333;
+    background: #0b1220;
+    color: #e5e7eb;
 }
 
-/* ===== BIG HEADER ===== */
+/* ===== HEADER ===== */
 header {
-    background: linear-gradient(135deg, #000, var(--primary));
-    color: #fff;
-    padding: 30px ,15px;
     text-align: center;
+    padding: 80px 20px 40px;
+    background: radial-gradient(circle at top left, rgba(34,197,94,0.15), transparent 40%);
 }
 
 header img {
-    width: 420px;
-    max-width: 90%;
-    height: auto;
-    margin-bottom: 25px;
+    width: 160px;
+    margin-bottom: 20px;
 }
 
 header h1 {
-    font-size: 48px;
-    letter-spacing: 2px;
-    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 10px;
 }
 
 header p {
-    font-size: 18px;
-    opacity: 0.9;
+    color: #9ca3af;
+    font-size: 1rem;
 }
 
 /* ===== PLANS ===== */
 .plans {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 40px 20px;
-    max-width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 60px 8%;
+    max-width: 1100px;
     margin: auto;
 }
 
 .plan {
-    background: #fff;
-    border-radius: 12px;
-    padding: 25px;
+    background: #111827;
+    border: 1px solid rgba(34,197,94,0.1);
+    border-radius: 14px;
+    padding: 30px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: transform 0.3s;
+    transition: 0.3s ease;
 }
 
-.plan:hover { transform: translateY(-6px); }
+.plan:hover {
+    transform: translateY(-8px);
+    border-color: #22c55e;
+}
 
-.plan h3 { color: var(--primary); margin-bottom: 10px; }
-.plan .speed { font-size: 22px; font-weight: bold; }
-.plan .price { font-size: 26px; margin: 10px 0; }
-.plan span { font-size: 13px; opacity: 0.7; }
+.plan h3 {
+    color: #22c55e;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
 
-/* ===== FORM ===== */
+.speed {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+.plan span {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+/* ===== FORM SECTION ===== */
 .form-section {
-    background: #fff;
-    max-width: 800px;
-    margin: 0 auto 60px;
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    max-width: 850px;
+    margin: 40px auto 100px;
+    padding: 40px;
+    background: #111827;
+    border-radius: 16px;
+    border: 1px solid rgba(34,197,94,0.1);
 }
 
 .form-section h2 {
     text-align: center;
-    color: var(--primary);
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 
-.form-group { margin-bottom: 15px; }
-label { font-weight: 600; display: block; margin-bottom: 6px; }
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
 input, select, textarea {
     width: 100%;
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 15px;
+    padding: 13px;
+    border-radius: 8px;
+    border: 1px solid #1f2937;
+    background: #0f1720;
+    color: #e5e7eb;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
 }
-textarea { height: 90px; resize: none; }
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #22c55e;
+}
+
+textarea {
+    resize: none;
+    height: 90px;
+}
+
 button {
     width: 100%;
-    padding: 14px;
-    background: var(--primary);
-    color: #fff;
+    padding: 15px;
+    background: #22c55e;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 10px;
 }
-button:hover { background: #084298; }
+
+button:hover {
+    background: #16a34a;
+    transform: translateY(-3px);
+}
 
 /* ===== FOOTER ===== */
 footer {
-    background: #000;
-    color: #aaa;
     text-align: center;
-    padding: 15px;
-    font-size: 13px;
+    padding: 25px;
+    background: #0f1720;
+    font-size: 0.9rem;
+    color: #6b7280;
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-    header img { width: 240px; }
-    header h1 { font-size: 32px; }
-    header p { font-size: 14px; }
+@media(max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .form-section {
+        padding: 25px;
+    }
 }
 </style>
-
 </head>
+
 <body>
 
 <header>
-    <img src="logo.png" alt="ARZTECH Logo">
-    
+    <img src="logo.png" alt="ArzTech Logo">
+    <h1>Apply for New Connection</h1>
+    <p>Fast, secure and professional internet installation services.</p>
 </header>
 
 <section class="plans">
     <div class="plan">
         <h3>Basic Plan</h3>
         <div class="speed">30 Mbps</div>
-        <div class="price">₱799</div>
+        <div class="price">₹799</div>
         <span>Unlimited Data</span>
     </div>
 
     <div class="plan">
         <h3>Standard Plan</h3>
         <div class="speed">60 Mbps</div>
-        <div class="price">₱999</div>
+        <div class="price">₹999</div>
         <span>Best for Families</span>
     </div>
 
     <div class="plan">
         <h3>Premium Plan</h3>
         <div class="speed">120 Mbps</div>
-        <div class="price">₱1299</div>
+        <div class="price">₹1299</div>
         <span>Gaming & Streaming</span>
     </div>
 </section>
 
 <section class="form-section">
-    <h2>Apply for Now</h2>
+    <h2>Customer Information</h2>
 
-    <form action="https://formsubmit.co/junwinearellano123456@gmail.com" method="POST">
-        <!-- Hidden fields for FormSubmit -->
+    <form action="https://formsubmit.co/junwinearellano123456@gmail.com" 
+      method="POST" 
+      enctype="multipart/form-data">
+
         <input type="hidden" name="_subject" value="New ARZTECH Internet Application">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
@@ -202,18 +254,28 @@ footer {
             <label>Select Plan</label>
             <select name="plan" required>
                 <option value="">Choose Plan</option>
-                <option>₱799 – 30 Mbps</option>
-                <option>₱999 – 60 Mbps</option>
-                <option>₱1299 – 120 Mbps</option>
+                <option>₹799 – 30 Mbps</option>
+                <option>₹999 – 60 Mbps</option>
+                <option>₹1299 – 120 Mbps</option>
             </select>
         </div>
+<div class="form-group">
+    <label>Upload Valid ID / Proof of Address</label>
 
+    <input type="file" id="fileUpload" name="document" accept="image/*" required>
+
+    <label for="fileUpload" class="custom-file-upload">
+        <i class="fas fa-upload"></i> Click to Upload Image
+    </label>
+
+    <span id="fileName" class="file-name"></span>
+</div>
         <button type="submit">Submit Application</button>
     </form>
 </section>
 
 <footer>
-    © 2026 ARZTECH • All Rights Reserved
+    © 2026 ArzTech Internet Installation Services. All Rights Reserved.
 </footer>
 
 </body>
